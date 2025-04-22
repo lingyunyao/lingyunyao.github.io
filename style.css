@@ -31,9 +31,29 @@ body {
 }
 
 header {
-  text-align: center;
-  padding-top: 100px; /* space under fixed nav */
+  padding-top: 100px;
   padding-bottom: 2em;
+}
+
+.header-container {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+  padding: 0 1em;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.header-photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 main {
@@ -44,7 +64,7 @@ main {
 
 section {
   margin-bottom: 3em;
-  padding-top: 60px; /* anchor offset so section titles aren't hidden */
+  padding-top: 60px;
 }
 
 footer {
