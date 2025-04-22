@@ -7,30 +7,44 @@ body {
   color: #333;
 }
 
-header, nav, section, footer {
+.topnav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+  padding: 0.5em 0;
+}
+
+.topnav .container {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.topnav a {
+  margin: 0 1em;
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: bold;
+}
+
+header {
+  text-align: center;
+  padding-top: 100px; /* space under fixed nav */
+  padding-bottom: 2em;
+}
+
+main {
   max-width: 800px;
   margin: auto;
   padding: 1em;
 }
 
-header {
-  text-align: center;
-  padding-top: 2em;
-}
-
-nav {
-  text-align: center;
-  margin: 1em 0;
-}
-
-nav a {
-  margin: 0 1em;
-  text-decoration: none;
-  color: #0066cc;
-}
-
 section {
-  margin-bottom: 2em;
+  margin-bottom: 3em;
+  padding-top: 60px; /* anchor offset so section titles aren't hidden */
 }
 
 footer {
