@@ -219,6 +219,10 @@ section p { color: #2a3543; }
 .two-col ul { padding-left: 1.1em; margin: 0; color: #2a3543; }
 .two-col li { margin-bottom: 0.45em; font-size: 0.96rem; }
 
+/* ---------- Awards (full width) ---------- */
+.award-list { padding-left: 1.1em; margin: 0; color: #2a3543; }
+.award-list li { margin-bottom: 0.5em; font-size: 0.97rem; }
+
 /* ---------- CV button ---------- */
 .cv-btn {
   display: inline-block;
