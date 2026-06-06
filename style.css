@@ -167,6 +167,25 @@ section p { color: #2a3543; }
 .timeline-item .what { font-weight: 600; margin: 0.1em 0; }
 .timeline-item .where { color: var(--muted); font-size: 0.95rem; }
 
+/* ---------- News ---------- */
+.news-list { list-style: none; padding: 0; margin: 0; }
+.news-list li {
+  display: flex;
+  gap: 1.1em;
+  padding: 0.55em 0;
+  border-bottom: 1px solid var(--line);
+}
+.news-list li:last-child { border-bottom: none; }
+.news-list .date {
+  flex-shrink: 0;
+  width: 5.6em;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.86rem;
+  padding-top: 0.1em;
+}
+.news-list .item { color: #2a3543; font-size: 0.97rem; }
+
 /* ---------- Publications ---------- */
 .pub-list { list-style: none; padding: 0; margin: 0; }
 .pub-list li {
@@ -228,4 +247,6 @@ footer {
   .header-links a { margin: 0 0.55em; }
   .two-col { grid-template-columns: 1fr; }
   .pub-list li { flex-direction: column; gap: 0.35em; }
+  .news-list li { flex-direction: column; gap: 0.15em; }
+  .news-list .date { width: auto; }
 }
