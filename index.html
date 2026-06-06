@@ -1,21 +1,20 @@
-"""<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lingyun Yao - Researcher</title>
+  <title>Lingyun Yao</title>
+  <meta name="description" content="Lingyun Yao - PhD researcher in energy-efficient and probabilistic machine learning, hardware/software co-design, and AI accelerators." />
   <link rel="stylesheet" href="style.css"/>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
 </head>
 <body>
   <nav class="topnav">
     <div class="container">
       <a href="#about">About</a>
+      <a href="#highlights">Research</a>
       <a href="#publications">Publications</a>
+      <a href="#education">Education</a>
+      <a href="#service">Awards &amp; Service</a>
       <a href="#cv">CV</a>
       <a href="#contact">Contact</a>
     </div>
@@ -25,10 +24,17 @@
     <div class="header-container">
       <div class="header-text">
         <h1>Lingyun Yao</h1>
-        <p>PhD Candidate | Aalto University, Finland</p>
+        <p class="role">PhD Researcher &middot; Aalto University, Finland</p>
+        <p class="tagline">I design energy-efficient and probabilistic machine learning systems &mdash; spanning Bayesian and tractable inference, hardware/software co-design, and uncertainty-aware AI across GPU, FPGA, and 16&nbsp;nm ASIC.</p>
+        <div class="header-links">
+          <a href="mailto:lingyun.yao@aalto.fi">Email</a>
+          <a href="https://scholar.google.com/citations?user=d0y42wgAAAAJ&hl=en">Google Scholar</a>
+          <a href="https://www.linkedin.com/in/lingyun-y-a4a38b200/">LinkedIn</a>
+          <a href="cv.pdf" target="_blank">CV</a>
+        </div>
       </div>
       <div class="header-photo">
-        <img src="photo.jpg" alt="Profile Photo"/>
+        <img src="photo.jpg" alt="Lingyun Yao"/>
       </div>
     </div>
   </header>
@@ -36,43 +42,125 @@
   <main>
     <section id="about">
       <h2>About Me</h2>
-      <p>I am a PhD student at Aalto University (Finland), advised by Professor Martin Andraud. I received my master's degree in Microelectronic Circuit Design from Aalto University in 2022, where I was exploring different number systems for probabilistic circuits and applying probabilistic circuits for self-adapted transceivers during research assistant and master's thesis work. 
-        From October 2024 to January 2025, I was a visiting scholar at MICAS, KU Leuven (Belgium), under the guidance of Professor Marian Verhelst. My research interests are designing  AI accelerators for energy-efficient TPMs and neuro-symbolic models, exploring ways to enhance explainable AI's hardware efficiency.</p>
+      <p>I am a PhD researcher at Aalto University (Finland), advised by Professor Martin Andraud. I received my M.Sc. in Micro- and Nanoelectronic Circuit Design from Aalto in 2022, where I explored number systems for probabilistic circuits and their application to self-adaptive RF transceivers. My research builds energy-efficient hardware and algorithms for probabilistic and neuro-symbolic AI &mdash; from GPU kernels for log-domain inference to a taped-out 16&nbsp;nm accelerator &mdash; with the goal of making uncertainty-aware and explainable AI efficient enough to run everywhere.</p>
+      <p>I have been a visiting scholar at MICAS, KU Leuven (Belgium) under Professor Marian Verhelst, where I led the backend and silicon testing of our neuro-symbolic AI chip.</p>
     </section>
 
-<!--    <section id="research">
-      <h2>Research</h2>
-      <p>Brief description of current or past research projects.</p>
-    </section> -->
+    <section id="highlights">
+      <h2>Research Highlights</h2>
+
+      <div class="card">
+        <h3>GPU acceleration of log-domain inference</h3>
+        <p>Approximate LogSumExp CUDA kernels for general-purpose GPUs, achieving <span class="metric">6&ndash;10&times; speedups</span> over standard PyTorch kernels for probabilistic inference. <em>(Submitted to NeurIPS 2026)</em></p>
+      </div>
+
+      <div class="card">
+        <h3>Neuro-symbolic AI accelerator &mdash; 16&nbsp;nm ASIC tape-out</h3>
+        <p>Designed and silicon-tested a 4&nbsp;mm&sup2; 16&nbsp;nm chip for both neural and symbolic acceleration, reaching <span class="metric">8.5&times; higher throughput</span> than the symbolic baseline with near-state-of-the-art neural performance. <em>(IEEE CICC 2026)</em></p>
+      </div>
+
+      <div class="card">
+        <h3>Energy-efficient inference via approximate computing</h3>
+        <p>FPGA and ASIC inference engines using approximate log-domain arithmetic with software-side error correction, delivering up to <span class="metric">649&times; energy reduction</span> and <span class="metric">46% area / 32% power</span> versus floating-point baselines, with negligible numerical error.</p>
+      </div>
+
+      <div class="card">
+        <h3>Hardware/software co-design toolflow &amp; benchmarking</h3>
+        <p>Co-developed an open-source toolchain that maps trained probabilistic models to FPGA, and ran systematic FPGA/GPU benchmarking to derive design guidelines for future probabilistic AI accelerators.</p>
+      </div>
+    </section>
 
     <section id="publications">
       <h2>Publications</h2>
-      <ul>
-        <li>K Periasamy, J Leslin, A Korsman, L Yao, M Andraud, AutoPC: an open-source framework for efficient probabilistic reasoning on FPGA hardware, 2024 22nd IEEE Interregional NEWCAS Conference (NEWCAS), 2024. <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10666359">[Link]</a></li>
-        <li>L Yao, M Trapp, J Leslin, G Singh, P Zhang, K Periasamy, M Andraud, On Hardware-efficient Inference in Probabilistic Circuits, The 40th Conference on Uncertainty in Artificial Intelligence, 2024. <a href="https://arxiv.org/pdf/2405.13639">[Link]</a></li>
-        <li>L Yao, M Trapp, K Periasamy, J Leslin, G Singh, M Andraud, Logarithm-approximate floating-point multiplier for hardware-efficient inference in probabilistic circuits, The 6th Workshop on Tractable Probabilistic Modeling, 2023. <a href="https://openreview.net/pdf?id=WL7YDLOLfK">[Link]</a></li>
-        <li>Leslin, A Hyttinen, K Periasamy, L Yao, M Trapp, M Andraud, A hardware perspective to evaluating probabilistic circuits, International Conference on Probabilistic Graphical Models, 2022. <a href="https://proceedings.mlr.press/v186/leslin22a/leslin22a.pdf">[Link]</a></li>
+      <ul class="pub-list">
+        <li>
+          <span class="venue">CICC '26</span>
+          <span><strong class="me">L. Yao</strong>, S. Zhao, M. Verhelst, M. Andraud. <em>EinChip: A 4.6/1.5 TOPS/W 6/24b Log-compute Einsum-based Accelerator for Neuro-Symbolic AI.</em> <span class="meta">IEEE Custom Integrated Circuits Conference (CICC), 2026.</span></span>
+        </li>
+        <li>
+          <span class="venue">TCAS-I '25</span>
+          <span><strong class="me">L. Yao</strong>, S. Zhao, M. Trapp, J. Leslin, M. Verhelst, M. Andraud. <em>LogSumExp: Efficient Approximate Logarithm Acceleration for Embedded Tractable Probabilistic Reasoning.</em> <span class="meta">IEEE Transactions on Circuits and Systems I (TCAS-I), 2025.</span> <a href="https://ieeexplore.ieee.org/document/11185227">[PDF]</a></span>
+        </li>
+        <li>
+          <span class="venue">UAI '24</span>
+          <span><strong class="me">L. Yao</strong>, M. Trapp, J. Leslin, G. Singh, P. Zhang, K. Periasamy, M. Andraud. <em>On Hardware-Efficient Inference in Probabilistic Circuits.</em> <span class="meta">40th Conference on Uncertainty in Artificial Intelligence (UAI), 2024.</span> <a href="https://arxiv.org/pdf/2405.13639">[PDF]</a></span>
+        </li>
+        <li>
+          <span class="venue">NEWCAS '24</span>
+          <span>K. Periasamy, J. Leslin, A. Korsman, <strong class="me">L. Yao</strong>, M. Andraud. <em>AutoPC: An Open-Source Framework for Efficient Probabilistic Reasoning on FPGA Hardware.</em> <span class="meta">22nd IEEE Interregional NEWCAS Conference, 2024.</span> <a href="https://ieeexplore.ieee.org/document/10666359">[PDF]</a></span>
+        </li>
+        <li>
+          <span class="venue">TPM '23</span>
+          <span><strong class="me">L. Yao</strong>, M. Trapp, K. Periasamy, J. Leslin, G. Singh, M. Andraud. <em>Logarithm-Approximate Floating-Point Multiplier for Hardware-Efficient Inference in Probabilistic Circuits.</em> <span class="meta">6th Workshop on Tractable Probabilistic Modeling, 2023.</span> <a href="https://openreview.net/pdf?id=WL7YDLOLfK">[PDF]</a></span>
+        </li>
+        <li>
+          <span class="venue">PGM '22</span>
+          <span>J. Leslin, A. Hyttinen, K. Periasamy, <strong class="me">L. Yao</strong>, M. Trapp, M. Andraud. <em>A Hardware Perspective to Evaluating Probabilistic Circuits.</em> <span class="meta">International Conference on Probabilistic Graphical Models (PGM), 2022.</span> <a href="https://proceedings.mlr.press/v186/leslin22a/leslin22a.pdf">[PDF]</a></span>
+        </li>
       </ul>
+      <p class="meta" style="margin-top:0.9em;font-size:0.95rem;">See <a href="https://scholar.google.com/citations?user=d0y42wgAAAAJ&hl=en">Google Scholar</a> for the full and most up-to-date list.</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="when">2022 &ndash; 2026</div>
+          <div class="what">Ph.D. in Electrical Engineering</div>
+          <div class="where">Aalto University &middot; Probabilistic computing, neuro-symbolic AI, energy-efficient AI</div>
+        </div>
+        <div class="timeline-item">
+          <div class="when">2020 &ndash; 2022</div>
+          <div class="what">M.Sc. in Micro- and Nanoelectronic Circuit Design</div>
+          <div class="where">Aalto University &middot; Thesis: automated embedded probabilistic circuits on FPGA</div>
+        </div>
+        <div class="timeline-item">
+          <div class="when">2016 &ndash; 2020</div>
+          <div class="what">B.Sc. in Microelectronics Science and Engineering</div>
+          <div class="where">Central South University</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="service">
+      <h2>Awards &amp; Service</h2>
+      <div class="two-col">
+        <div>
+          <h3>Awards &amp; Grants</h3>
+          <ul>
+            <li>HPY Research Foundation Grant &mdash; AI-based self-adaptive RF transceiver using hardware-efficient probabilistic models</li>
+            <li>Aalto University &mdash; Full Admission Scholarship (M.Sc.), Dean Scholarship, Incentive Scholarship</li>
+            <li>Central South University &mdash; Academic Prizes (2016&ndash;2019) and National Encouragement Scholarship of China</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Academic Activities</h3>
+          <ul>
+            <li>Co-organizer, 8th Workshop on Tractable Probabilistic Modeling (TPM 2025), co-located with UAI 2025</li>
+            <li>Participant, Dagstuhl Seminar: Tensor Factorizations Meet Probabilistic Circuits, 2026</li>
+            <li>Presenter, Nordic Probabilistic AI Summer School, Copenhagen, 2024</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section id="cv">
       <h2>Curriculum Vitae</h2>
-      <p><a href="cv.pdf" target="_blank">Download my CV (PDF)</a></p>
+      <p><a class="cv-btn" href="cv.pdf" target="_blank">Download CV (PDF)</a></p>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:lingyun.yao@aalto.fi">lingyun.yao@aalto.fi</a></p>
       <p>
-        <a href="https://scholar.google.com/citations?user=d0y42wgAAAAJ&hl=en">Google Scholar</a> |
+        <a href="https://scholar.google.com/citations?user=d0y42wgAAAAJ&hl=en">Google Scholar</a> &middot;
         <a href="https://www.linkedin.com/in/lingyun-y-a4a38b200/">LinkedIn</a>
       </p>
     </section>
   </main>
 
   <footer>
-    <p>© Lingyun Yao, 2025</p>
+    <p>&copy; Lingyun Yao, 2026</p>
   </footer>
 </body>
 </html>
-"""
