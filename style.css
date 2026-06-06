@@ -4,8 +4,8 @@
   --ink: #1c2530;
   --muted: #5b6675;
   --line: #e6e8ec;
-  --accent: #1a5fb4;
-  --accent-soft: #e7eff8;
+  --accent: #3a5f86;
+  --accent-soft: #e9edf3;
   --shadow: 0 1px 3px rgba(20, 30, 45, 0.06), 0 8px 24px rgba(20, 30, 45, 0.05);
   --maxw: 860px;
 }
@@ -198,7 +198,7 @@ section p { color: #2a3543; }
 .venue {
   flex-shrink: 0;
   display: inline-block;
-  width: 6.6em;
+  width: 7.4em;
   text-align: center;
   white-space: nowrap;
   height: fit-content;
